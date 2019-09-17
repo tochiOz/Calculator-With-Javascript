@@ -1,0 +1,54 @@
+body{
+    background: #ee0979;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    text-align: center;
+}
+
+marquee {
+    font-family: cursive;
+    font-size: 40px;
+    margin: 30px;
+}
+
+.result {
+    width: 42%;
+    height: 200px;
+    background-color: #a10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto 20px;
+    border: none;
+    color: beige;
+}
+
+#result {
+    font-size: 50px;
+}
+
+.calculate {
+    width: 400px;
+    margin: 0 auto;
+}
+
+input{
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    font-size: 1.5em;
+    background-color: blue;
+    padding: 5px 10px;
+    border: none;
+    margin: 10px 2px;
+    width: 100px;
+}
+
+.music {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}

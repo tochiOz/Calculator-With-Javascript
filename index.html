@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <marquee direction="right">A Simple Calculator</marquee>
+
+    <div class="result shadow p-3 mb-8 rounded">
+        <p id="result"> Answer</p>
+    </div>
+
+    <p class="input d-flex justify-content-center">
+        <input type="text" id="first" class="form-control"
+            style="width: 300px; padding: 10px; border-radius: 10px; margin: 0 10px; color:black">
+        <input type="text" id="second" class="form-control"
+            style="width: 300px; padding: 10px; border-radius: 10px; margin: 0 10px; color: black">
+    </p>
+
+    <div class="d-flex justify-content-center">
+        <button class="btn btn-success" id="add" onclick="calculator('+')">Add</button>
+        <button class="btn btn-danger" id="subtract" onclick="calculator('-')">Subtract</button>
+        <button class="btn btn-primary" id="multiply" onclick="calculator('*')">Multiply</button>
+        <button class="btn btn-warning" id="divide" onclick="calculator('/')">Divide</button>
+        <button class="btn btn-secondary" id="clear" onclick="clearcalc()">Clear</button>
+    </div>
+
+    <!-- <div>
+    <button id="greater than" onclick="calculator('>')"></button>
+    <button id="greater than" onclick="calculator('>')"></button>
+    <button id="greater than" onclick="calculator('>')"></button>
+    <button id="greater than" onclick="calculator('>')"></button>
+</div> -->
+    <div class="music">
+        <audio controls autoplay>
+            <source src="song.mp3" type="audio/ogg">
+            <source src="song.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+
+</body>
+<script src="js/calculator.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+</html>
