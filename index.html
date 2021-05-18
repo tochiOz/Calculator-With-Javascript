@@ -1,148 +1,166 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Simple Math Calculator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-    
+
 </head>
+
 <body>
+    <iframe seamless src="http://127.0.0.1:3000/header" style="border: 0; width:100%;"
+        title="Iframe Example" allow="fullscreen execution-while-not-rendered navigation-override"
+        sandbox="allow-modals allow-popups allow-scripts allow-top-navigation" loading="lazy" aria-hidden="false"></iframe>
     <div class="cal-container">
         <table>
-        
+
             <tr>
-                <tr>
-                    <td class="heading">Simple Math Calculator</td>
-                </tr>
-            
-                <td>
-                    <input type="text" id="question" placeholder="0" readonly= "readonly" name="question">
-                    <input type="text" id="answer" style="color:blue;" readonly= "readonly">
-                </td>
+            <tr>
+                <td class="heading">Simple Math Calculator</td>
+            </tr>
+
+            <td>
+                <input type="text" id="question" placeholder="0" readonly="readonly" name="question">
+                <input type="text" id="answer" style="color:blue;" readonly="readonly">
+            </td>
             </tr>
 
             <!--==============Button Elements to detect numbers===============-->
             <tr>
                 <td class="tab">
                     <input type="button" class="btn" value="CE" onclick="clearNumber()" style=" background: red;">
-                    <input type="button" class="btn"  value="&#247" onclick="getOperan('/')">
-                    <input type="button" class="btn"  value="x" onclick="getOperan('x')">
-                    <input type="button" class="btn"  value="&#8592" onclick="deleteNum()">
+                    <input type="button" class="btn" value="&#247" onclick="getOperan('/')">
+                    <input type="button" class="btn" value="x" onclick="getOperan('x')">
+                    <input type="button" class="btn" value="&#8592" onclick="deleteNum()">
                     <br>
-                    <input type="button" class="btn"  value="1" onclick="getnumber(1)">
-                    <input type="button" class="btn"  value="2" onclick="getnumber(2)">
-                    <input type="button" class="btn"  value="3" onclick="getnumber(3)">
-                    <input type="button" class="btn"  value="+" onclick="getOperan('+')">
+                    <input type="button" class="btn" value="1" onclick="getnumber(1)">
+                    <input type="button" class="btn" value="2" onclick="getnumber(2)">
+                    <input type="button" class="btn" value="3" onclick="getnumber(3)">
+                    <input type="button" class="btn" value="+" onclick="getOperan('+')">
                     <br>
-                    <input type="button" class="btn"  value="4" onclick="getnumber(4)">
-                    <input type="button" class="btn"  value="5" onclick="getnumber(5)">
-                    <input type="button" class="btn"  value="6" onclick="getnumber(6)">
-                    <input type="button" class="btn"  value="-" onclick="getOperan('-')">
-                    <br>                
-                    <input type="button" class="btn"  value="7" onclick="getnumber(7)">
-                    <input type="button" class="btn"  value="8" onclick="getnumber(8)">
-                    <input type="button" class="btn"  value="9" onclick="getnumber(9)">
-                    <input type="button" class="btn"  value="()" onclick="brack()">
+                    <input type="button" class="btn" value="4" onclick="getnumber(4)">
+                    <input type="button" class="btn" value="5" onclick="getnumber(5)">
+                    <input type="button" class="btn" value="6" onclick="getnumber(6)">
+                    <input type="button" class="btn" value="-" onclick="getOperan('-')">
                     <br>
-                    <input type="button" class="btn"  value="±/-" onclick="getOperan('±/-')">
-                    <input type="button" class="btn"  value="0" onclick="getnumber(0)">
-                    <input type="button" class="btn" value="=" style="width:140px; background: rgb(0, 255, 55);" onclick="calculate()">
+                    <input type="button" class="btn" value="7" onclick="getnumber(7)">
+                    <input type="button" class="btn" value="8" onclick="getnumber(8)">
+                    <input type="button" class="btn" value="9" onclick="getnumber(9)">
+                    <input type="button" class="btn" value="()" onclick="brack()">
+                    <br>
+                    <input type="button" class="btn" value="±/-" onclick="getOperan('±/-')">
+                    <input type="button" class="btn" value="0" onclick="getnumber(0)">
+                    <input type="button" class="btn" value="=" style="width:140px; background: rgb(0, 255, 55);"
+                        onclick="calculate()">
             </tr>
         </table>
     </div>
-    <script >
-    function getnumber(num) {
-        let textDis = document.getElementById("question");
-        switch (num) {
-            case 1:
-                textDis.value += 1;
-                break;
-            case 2:
-                textDis.value += 2;
-                break;
-            case 3:
-                textDis.value += 3;
-                break;
-            case 4:
-                textDis.value += 4;
-                break;
-            case 5:
-                textDis.value += 5;
-                break;
-            case 6:
-                textDis.value += 6;
-                break;
-            case 7:
-                textDis.value += 7;
-                break;
-            case 8:
-                textDis.value += 8;
-                break;
-            case 9:
-                textDis.value += 9;
-                break;
-            case 0:
-                textDis.value += 0;
-                break;    
+    <iframe seamless src="http://127.0.0.1:3000/footer" style="border: 0; width:100%; height:650px; overflow: hidden;"
+        id="footer" title="Iframe Example"
+        sandbox="allow-modals allow-popups allow-popups-to-escape-sandbox allow-scripts allow-top-navigation"></iframe>
+
+    <script>
+        const footter = document.getElementById('footer');
+        footer.addEventListener("click", (e) => {
+            console.log(e);
+            // window.top.location.href = 'http://www.example.com';
+        })
+    </script>
+    <script>
+        function getnumber(num) {
+            let textDis = document.getElementById("question");
+            switch (num) {
+                case 1:
+                    textDis.value += 1;
+                    break;
+                case 2:
+                    textDis.value += 2;
+                    break;
+                case 3:
+                    textDis.value += 3;
+                    break;
+                case 4:
+                    textDis.value += 4;
+                    break;
+                case 5:
+                    textDis.value += 5;
+                    break;
+                case 6:
+                    textDis.value += 6;
+                    break;
+                case 7:
+                    textDis.value += 7;
+                    break;
+                case 8:
+                    textDis.value += 8;
+                    break;
+                case 9:
+                    textDis.value += 9;
+                    break;
+                case 0:
+                    textDis.value += 0;
+                    break;
+            }
         }
-    }
 
-    
 
-    function getOperan(sign) {
-        let textDis = document.getElementById("question")
-        switch (sign) {
-            case '+':
-                textDis.value += '+';
-                break;
-            case '/':
-                textDis.value += '/';
-                break;
-            case 'x':
-                textDis.value += '*';
-                break;
-            case '-':
-                textDis.value += '-';
-                break;        
-            case '±/-':
-                textDis.value += '-' + textDis.value;
-                break;        
+
+        function getOperan(sign) {
+            let textDis = document.getElementById("question")
+            switch (sign) {
+                case '+':
+                    textDis.value += '+';
+                    break;
+                case '/':
+                    textDis.value += '/';
+                    break;
+                case 'x':
+                    textDis.value += '*';
+                    break;
+                case '-':
+                    textDis.value += '-';
+                    break;
+                case '±/-':
+                    textDis.value += '-' + textDis.value;
+                    break;
+            }
         }
-    }
 
-    const textDis = document.getElementById("question");
-    const Answer = document.getElementById("answer");
+        const textDis = document.getElementById("question");
+        const Answer = document.getElementById("answer");
 
-    function calculate() {
-        
-        Answer.value = Math.floor(+eval(textDis.value));
-    }
+        function calculate() {
 
-    function clearNumber() {
-        textDis.value = "";
-        Answer.value = "";
-    }
-
-    function deleteNum() {
-        let del = textDis.value;
-        if (del.length > 0) {
-            let de = del.substring(0, del.length - 1);
-            textDis.value = de;
+            Answer.value = Math.floor(+eval(textDis.value));
         }
-    }
 
-    var i = 0;
-    function brack() {
-        if (i == 0) {
-            textDis.value += '(';
-            i = 1;
-        }else if (i == 1) {
-            textDis.value += ')';
-            i = 0;
+        function clearNumber() {
+            textDis.value = "";
+            Answer.value = "";
         }
-    }
+
+        function deleteNum() {
+            let del = textDis.value;
+            if (del.length > 0) {
+                let de = del.substring(0, del.length - 1);
+                textDis.value = de;
+            }
+        }
+
+        var i = 0;
+        function brack() {
+            if (i == 0) {
+                textDis.value += '(';
+                i = 1;
+            } else if (i == 1) {
+                textDis.value += ')';
+                i = 0;
+            }
+        }
     </script>
 </body>
+
 </html>

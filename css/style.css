@@ -1,3 +1,7 @@
+body {
+    padding: 0%;
+    margin: 0%;
+}
 .cal-container{
     margin: 40px 500px 0px 500px;
     border: 1px hidden;
